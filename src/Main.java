@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
@@ -28,6 +30,21 @@ public class Main {
 		estudios = sc.nextLine();
 		System.out.println("introduzca su telefono: ");
 		telefono = sc.nextLine();
+		
+		
+	}
+	
+	
+public static void generarFicheroJugadoresMas30puntos(File fichero) {
+		
+		if (!fichero.exists()) {
+			try {
+				fichero.createNewFile();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 	}
 
 }
